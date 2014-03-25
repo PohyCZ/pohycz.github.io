@@ -34,6 +34,15 @@ letters = [];
 
 function loadDictionary(lang) {
 	defaultLang = lang;
+
+	if(loaded) {
+		$('#wordSize').val('');
+		generateLetters();
+		$('#letters').val('');
+		getWords();
+		console.log('wat');
+	}
+
 	switch(lang) {
 		case "en":
 			path = 'words/en.txt';
@@ -56,9 +65,7 @@ function loadDictionary(lang) {
 		url: path,
 		success: function(data) {
 			words = data.toLowerCase().split('\n');
-			// debug('words: ' + words);
 			loaded = true;
-			test();
 		}
 	});
 }
@@ -148,12 +155,3 @@ function getWords() {
 }
 
 loadDictionary(defaultLang);
-
-function test() {
-	// $('#wordSize').val(3);
-	// generateLetters();
-	// $('#1').val('t');
-	// // $('#letters').val('ry');
-	// getWords();
-}
-
