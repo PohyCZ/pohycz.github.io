@@ -1,9 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="cs">
 <head>
 	<meta charset="UTF-8">
+	<meta name="author" content="David Pohan" />
+	<meta name="description" content="Nápověda pro hru PixWords" />
+	<meta name="keywords" content="pixwords, pix, words, helper, finder, cheats, cheat, answer, answers, nápověda, odpovědi" /> 
 
 	<title>PixWords Helper</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/main.css" />
@@ -13,21 +18,20 @@
 	<script type="text/javascript" src="js/helper.js"></script>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4"></div>
-			<div class="col-md-4">
-				<div class="form-group">
-					<h1>PixWords Helper</h1>
-					<input type="text" id="wordSize" class="form-control" placeholder="Word size" oninput="generateLetters(); getWords()" />
-					<div class="letters"></div><br />
-					<input type="text" id="letters" class="form-control" placeholder="Available letters" oninput="getWords()" /><br />
-					<input type="button" class="form-control btn btn-primary" onclick="getWords()" value="Get possible words" />
-					<div id="result"></div>
-				</div>
-			</div>
-			<div class="col-md-4"></div>
-		</div>
+	<div class="container-fluid">
+		<h1>PixWords Helper	</h1>
+		<span class="btn-group">
+			<input type="button" id="cs" class="btn btn-primary btn-lang" onclick="loadDictionary('cs')" value="Čeština" />
+			<input type="button" id="en" class="btn btn-default btn-lang" onclick="loadDictionary('en')" value="English" />
+		</span>
+		<br />
+		<br />
+		<input type="text" id="wordSize" class="form-control" placeholder="Délka slova" oninput="generateLetters(); getWords()" />
+		<div class="letters"></div><br />
+		<input type="text" id="letters" class="form-control" placeholder="Dostupná písmena" oninput="getWords()" /><br />
+		<input type="button" id="getWords" class="form-control btn btn-primary" onclick="getWords()" value="Ukaž mi možná slova!" />
+		<div id="result">Slova uvidíš tady</div><br />
+		<a href="mailto:pixwordshelper@gmail.com" id="mail" class="form-control btn btn-default">Něco nefunguje?</a>
 	</div>
 </body>
 </html>

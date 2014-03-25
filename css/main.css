@@ -1,4 +1,25 @@
+h1 {
+	text-align: center;
+}
+
 #result {
 	margin-top: 10px;
 	font-size: 18px;
+	border: 1px solid #cacaca;
+	border-radius: 4px;
+	padding: 4px;
+	text-align: center;
+}
+
+.form-control {
+	text-align: center;
+}
+
+.btn-group {
+	width: 100%;
+}
+
+.btn-lang {
+	width: 50%;
+	display: inline;
 }
