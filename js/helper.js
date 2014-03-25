@@ -9,8 +9,8 @@ var defaultLang = "cs";
 var path = "";
 
 var defaultLetters = {
-	cs: ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','ě','š','č','ř','ž','ý','á','í','é','ú','ů'], 
-	en: ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+	cs: ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','ě','š','č','ř','ž','ý','á','í','é','ú','ů', ' ', '-'], 
+	en: ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z', ' ', '-']
 };
 
 var texts = {
@@ -146,7 +146,7 @@ function getWords() {
 
 		var result = "";
 		matchedWords.forEach(function(word) {
-			result += word + " ";
+			result += word + ", ";
 		});
 		// result += "</p>";
 		// debug('result: ' + result);
